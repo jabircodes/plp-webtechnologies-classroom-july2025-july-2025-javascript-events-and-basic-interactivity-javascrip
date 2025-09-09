@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Handling, Basic Interactivity Elements with  Form Validation</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    
+    <button onclick="toggleTheme()">Change Theme</button>
+    <hr>
+    <div class="dropdown">
+        <button id="dropdownBtn">Dropdown Menu</button>
+    <div class="dropdown-content" id="dropdownContent">
+        <a href="#">Home</a>
+        <a href="#">Profile</a>  
+    </div>
+    </div>
+    <hr>
+    <section>
+    <h2>Click Counter Button</h2>
+        <button id="clickBtn">Click me!</button>
+        <p>Count: <span id="count">0</span></p>
+    </section>
+    
+    <hr>
+    <p>This text changes in toggleTheme</p>
+    <!-- inline event handlers -->
+    <input type="text"
+    onfocus="this.style.background='yellow';" 
+    onblur="this.style.background='';" placeholder="Focus to change color">
+
+    <p onmouseover="this.style.color='red'; this.innerText='Mouse has passed over me!';"
+    >This text changes once mouse passes over.</p>
+    
+    <!-- form validation -->
+    <form id="myForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <span id="usernameError" class="error"></span>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <span id="emailError" class="error"></span>
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <span id="passwordError" class="error"></span>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
